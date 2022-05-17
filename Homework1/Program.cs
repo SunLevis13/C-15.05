@@ -20,4 +20,3 @@ void Palind(int num)
 Palind(12421);
 Palind(23423);
 
-//if(array[index]=array[l] & array[index+1]=array[l-1])
