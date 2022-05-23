@@ -1,4 +1,5 @@
-﻿// Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
+﻿// Задайте одномерный массив из 123 случайных чисел.
+//Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
 void Print(int[] arr)
 {
     int size = arr.Length;
@@ -16,7 +17,7 @@ int[] Massive(int size)
 
     for (int i = 0; i < size; i++)
     {
-        arr[i] = new Random().Next(-9, 10);
+        arr[i] = new Random().Next(-9, 150);
     }
     return arr;
 }
@@ -38,4 +39,5 @@ int InRange(int[] arr)
 int[] arr_1 = Massive(123);
 InRange(arr_1);
 Print(arr_1);
+Console.WriteLine();
 Console.WriteLine(InRange(arr_1));
