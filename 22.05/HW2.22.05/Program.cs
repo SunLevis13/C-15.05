@@ -24,12 +24,11 @@ int[] Massive(int size)
 int SumUneven(int[] arr)
 {
     int sum = 0;
-    int size = arr.Length;
     int i = 1;
-    while( i < size)
+    while( i < arr.Length)
     {    
      sum += arr[i];
-     i=i+2;
+     i += 2;
     }
     return sum;
 }
