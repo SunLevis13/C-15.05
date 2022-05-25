@@ -23,38 +23,25 @@ int[] Massive(int size)
 
 int[] MinMaxdiff(int[] arr)
 {
+    int i = 0;
+    int min = 1;
     int diff = 0;
-    for (int i = 0; i < arr.Length; i++)
+    while (i < arr.Length)
     {
-        int min = 0;
-        for (int i = 0; i < arr.Length; i++)
-
+        if (arr[i] < arr[min])
         {
-            if (arr[i] < arr[min])
-            {
-                min = i;
-            }
+            arr[i] = arr[min];
         }
-
-        int max = 0;
-        for (int i = 0; i < arr.Length; i++)
-
-        {
-            if (arr[i] > arr[max])
-            {
-                max = i;
-            }
-        }
-        return arr;
+        diff = diff + arr[min];
+        i++;
     }
-    diff = diff + arr[min] + arr[max];
-    return diff;
-
+    return arr[min];
 }
 
 
 int[] arr_1 = Massive(9);
 MinMaxdiff(arr_1);
 Print(arr_1);
+Console.WriteLine(MinMaxdiff(arr_1));
 
 
