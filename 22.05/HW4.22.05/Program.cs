@@ -20,6 +20,28 @@ int [] Massive (int size)
     return arr;
 }
 
+int Proizv (int[]arr)
+{
+    int proizv=1;
+    int size = arr.Length;
+    for (int i = 0; i < size/2; i++)
+    {
+        if(size%2 != 0)
+        {
+            proizv = arr[i]*arr[size-1-i];
+        }
+        if(size%2 == 0)
+        {
+            proizv = arr[i]*arr[size-1-i];
+        }
+        Console.Write($"{proizv} ");
+        
+    }
+    return proizv;
+ }
 
-int [] arr_1 = Massive(5);
+int [] arr_1 = Massive(9);
+Proizv(arr_1);
+Console.WriteLine();
 Print(arr_1);
+
