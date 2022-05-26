@@ -8,7 +8,7 @@ void Print(int[]arr)
         Console.Write($"{arr[i]} ");
     }
     Console.WriteLine();
-}
+ }
 
 int [] Massive (int size)
 {
@@ -35,7 +35,7 @@ int Proizv (int[]arr)
             proizv = arr[i]*arr[size-1-i];
         }
         Console.Write($"{proizv} ");
-        
+           
     }
     return proizv;
  }
