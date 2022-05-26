@@ -38,7 +38,7 @@ int MinMaxdiff(int[] arr)
             arr[i] = arr[max];
         }
     }
-    diff = arr[max] + arr[min];
+    diff = arr[max] - arr[min];
     return diff;
 }
 
