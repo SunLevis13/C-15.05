@@ -24,7 +24,7 @@ double[] MassNums(int size)
 
 double NewArray(int [] arr)
 {
-    double []newarray = new int [size];
+    double []newarray = new double [size];
     int size = arr.Length;
 
     for (int i = 0; i < size; i++)
