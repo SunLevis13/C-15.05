@@ -1,12 +1,18 @@
 ﻿// Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
-int Count(int num)
+int Check(int num)
 {
-    int i = 0;
-    while(num>0)
-    {i = i + 1;}
-    return i;
+    int count = 0;
     
+    for (int i = 1; i <= num; i++)
+    {
+        Console.Write($"Number {i}: ");
+        int a = int.Parse(Console.ReadLine());
+        if (a > 0) count++;
+    }
+    return count;
 }
 
-Console.Write (Count(4));
+Console.Write("How many number will you fill?: ");
+int a = int.Parse(Console.ReadLine());
+Console.WriteLine($"Numbers value greater zero: {Check(a)}");
