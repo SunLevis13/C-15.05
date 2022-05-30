@@ -1,43 +1,51 @@
 ﻿// Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
-void Print(double[] arr)
+void Print(int[,] arr)
 {
-    int size = arr.Length;
+    int row_size = arr.GetLength(0);
+    int column_size = arr.GetLength(1);
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < row_size; i++)
     {
-        Console.Write($"{arr[i]} ");
+        for (int j = 0; j < column_size; j++)
+        {
+            Console.Write($" {arr[i, j]} ");
+        } 
+        Console.WriteLine();       
     }
     Console.WriteLine();
 }
 
-double[] MassNums(int size)
+int[,] MassNums(int row, int column, int from, int to)
 {
-    double[] arr = new double[size];
-    Random n_new = new Random();
+    int[,] arr = new int[row, column];
 
-    for (int i = 1; i < size; i++)
-    {
-        arr[i] = Math.Round(n_new.NextDouble() * (10 + 12) - 10, 2);
+    for (int i = 0; i < row; i++)
+    {   
+        for (int j = 0; j < column; j++)
+        {
+            arr[i, j] = new Random().Next(1, 10);
+        }        
     }
     return arr;
 }
 
-double NewArray(int [] arr)
+int[,] CopyMass(int[,] arr)
 {
-    double []newarray = new double [size];
-    int size = arr.Length;
-
-    for (int i = 0; i < size; i++)
+    int row_size = arr.GetLength(0);
+    int column_size = arr.GetLength(1);
+    int[,] new_arr = new int[row_size, column_size];
+    
+    for (int i = 0; i < row_size; i++)
     {
-        newarray[i] = arr[i];
+        for (int j = 0; j < column_size; j++)
+        {
+            new_arr[i, j] = arr[i, j];
+        }        
     }
-    return newarray;
-   // Console.WriteLine($"NewMassive = {Math.Round(newarray[i], 2)}");
+    return new_arr;
 }
 
-double[] arr_1 = MassNums(10);
+int[,] arr_1 = MassNums(7, 2, 11, 9);
 Print(arr_1);
-double [] arr_1_new = NewArray(arr_1);
+int[,] arr_1_new = CopyMass(arr_1);
 Print(arr_1_new);
-
-
