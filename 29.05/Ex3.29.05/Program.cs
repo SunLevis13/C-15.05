@@ -6,7 +6,7 @@ void PrintArray (int[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Console.Write(arr[i, j] +" ");
+            Console.Write($"{arr[i, j]} ");
         } 
         Console.WriteLine();       
     }
@@ -30,9 +30,9 @@ int[,]GetNewArray (int[,] array)
 {
     int row = array.GetLength(0);
     int column = array.GetLength(1);
-    for (int i =0; i<row; i = i +2)
+    for (int i =0; i<row; i += 2)
     {
-        for (int j = 0; j<column ; j = j+2)
+        for (int j = 0; j<column ; j += 2)
             array [i,j] = array [i,j]* array [i,j];
      }
     return array;
