@@ -8,7 +8,7 @@ void Print(int[,] arr)
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < column; j++)
-            Console.Write($" {arr[i, j],3} ");
+            Console.Write($" {arr[i, j], 3} ");
         Console.WriteLine();
     }
 }
@@ -53,17 +53,17 @@ void NewArray(int[,] arr)
 
     for (int i = 0; i < a; i++)
     {
-        if (i == matr[0]) continue;
+        if (i == matr[0])
+            continue;
         for (int j = 0; j < b; j++)
         {
-            if (j == matr[1]) continue;
+            if (j == matr[1])
+                continue;
             Console.Write($" {arr[i, j]} ");
         }
         Console.WriteLine();
     }
 }
-
-
 
 int[,] matrix = new int[4, 4];
 FillArray(matrix, -10, 10);
