@@ -38,8 +38,7 @@ void SummMin(int[,] arr)
         num = 0;
         for (int j = 0; j < column; j++)
             num += arr[i, j];
-            // Console.WriteLine(num);
-
+            
         if (summ > num)
         {
             summ = num;
