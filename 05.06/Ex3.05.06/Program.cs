@@ -5,7 +5,9 @@ int Summ(int num)
 {
     if (num == 0)
         return 0;
+    Console.WriteLine((num / 10) + num % 10);
     return Summ(num / 10) + num % 10;
+    
 }
 
 Console.Write(Summ(453));
