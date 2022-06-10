@@ -1,5 +1,6 @@
 ﻿// Собрать строку с числами от a до b, a ≥ b
 
+// обычный способ
 string NumbersFor(int a, int b)
 {
  string result = String.Empty;
@@ -9,6 +10,8 @@ string NumbersFor(int a, int b)
  }
  return result;
 }
+
+// способ Рекурсии
 string NumbersRec(int a, int b)
 {
  if (a <= b) return NumbersRec(a + 1, b) + $"{a} ";
