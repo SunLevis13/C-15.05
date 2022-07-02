@@ -1,6 +1,5 @@
-﻿// string[] array = {"hello", "2", "world", ":-)"};
-// string[] new_array = new string[array.Length];
-void NewArray(string [] array)
+﻿
+void NewArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -8,19 +7,31 @@ void NewArray(string [] array)
         {
             Console.Write($"{array[i]} ");
         }
+
     }
 }
 
-void PrintArray(string [] array)
+void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"new array is ");
+        Console.Write("New array is: ");
+        break;
     }
-    
 }
 
-
-string [] array_1 = {"hello", "2", "world", ":-)"};
-NewArray(array_1);
+string[] array_1 = { "hello", "2", "world", ":-)" };
 PrintArray(array_1);
+NewArray(array_1);
+Console.WriteLine();
+
+string[] array_2 = { "1234", "1567", "-2", "computer science" };
+PrintArray(array_2);
+NewArray(array_2);
+Console.WriteLine();
+
+string[] array_3 = { "Russia", "Denmark", "Kazan" };
+PrintArray(array_3);
+NewArray(array_3);
+
+
